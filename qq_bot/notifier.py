@@ -2,6 +2,8 @@ import os
 import requests
 from datetime import datetime
 
+from openpyxl.worksheet import page
+
 TEMPLATE_PATH = os.path.join(os.path.dirname(__file__), "templates", "signal.html")
 HTML_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "html_output")
 
@@ -19,8 +21,8 @@ def generate_html(msg: str) -> str:
     """
     html = load_html_template().replace("{{CONTENT}}", msg)
 
-    filename = datetime.now().strftime("etf_%Y%m%d_%H%M%S.html")
-    path = os.path.join(HTML_OUTPUT_DIR, filename)
+    filename = datetime.now().strftime("%Y%m%d.html")
+    path = os.path.join("../page/", filename)
 
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
