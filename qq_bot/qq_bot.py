@@ -1,6 +1,4 @@
 import requests
-import time
-from sipbuild.generator.outputs.formatters import template
 open_id = "o4qtq6wS9zthnKP8z5f74e1m_vrI"
 APPID = "wxbe3dd6f4aaddc86f"
 APPSECRET = "cc79700d7668dcf42590795d94051f00"

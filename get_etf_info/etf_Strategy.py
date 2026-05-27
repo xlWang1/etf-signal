@@ -9,7 +9,6 @@
 5. 输出明日操作建议
 """
 import time
-
 import baostock as bs
 import pandas as pd
 from qq_bot import qq_bot

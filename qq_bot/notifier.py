@@ -2,8 +2,6 @@ import os
 import requests
 from datetime import datetime
 
-from openpyxl.worksheet import page
-
 TEMPLATE_PATH = os.path.join(os.path.dirname(__file__), "templates", "signal.html")
 HTML_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "html_output")
 
