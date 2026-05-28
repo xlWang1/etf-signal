@@ -339,7 +339,7 @@ def print_message():
 
     # 3️⃣ 发送模板消息
     token = qq_bot.get_access_token()
-    html_url = "file://" + html_path  # 本地调试用
+    html_url = html_path  # 本地调试用
 
     result = send_signal_via_template(
         qq_bot.open_id,
@@ -348,11 +348,11 @@ def print_message():
         html_url
     )
 
-    print(result)
+    print(msg)
 if __name__ == "__main__":
     mock_positions = [
         'sz.159131',
-        'sh.562500',
+        'sz.159381',
     ]
     tomorrow_signal(mock_positions)
     print_message()

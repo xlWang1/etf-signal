@@ -24,7 +24,7 @@ def generate_html(msg: str) -> str:
 
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
-
+    print(f"HTML 文件已生成：https://xlwang1.github.io/etf-signal/page/{filename}")
     return path
 
 
@@ -48,7 +48,7 @@ def send_signal_via_template(openid, template_id, access_token, html_url: str):
         "url": "https://xlwang1.github.io/etf-signal-pages/20260528.html",
         "data": {
             "date": {"value": datetime.now().strftime("%Y-%m-%d %H:%M:%S")},
-            "notice": {"value": "https://xlwang1.github.io/etf-signal-pages/20260528.html"}
+            "notice": {"value": ""}
         }
     }
 
