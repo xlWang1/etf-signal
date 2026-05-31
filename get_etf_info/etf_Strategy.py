@@ -37,6 +37,8 @@ ETF_POOL = {
     "sz.159561": "德国ETF",
     "sz.159131": "港股通信息技术ETF",
     "sz.159381": "创业板人工智能ETF",
+    # "sh.515070": "人工智能ETF",
+    # "sz.159949": "创业板50ETF华安",
     "sh.512800": "银行ETF",
     "sz.159566": "储能电池ETF",
     "sz.159570": "港股通创新药ETF汇添富",
@@ -50,7 +52,8 @@ ETF_POOL = {
     "sh.512710": "军工龙头ETF富国",
     "sz.159611": "电力ETF广发",
     "sh.516150": "稀土ETF嘉实",
-    "sz.159869": "游戏ETF华夏",
+    "sh.515880": "通信ETF国泰",
+    "sh.512980": "传媒ETF广发",
     "sz.159326": "电网设备ETF华夏"
 }
 
@@ -118,7 +121,7 @@ def select_etf(row: pd.Series) -> bool:
 
 
 def market_safe() -> bool:
-    df = get_close_data("sz.159919")
+    df = get_close_data("sh.510300")
     if len(df) < 20:
         return False
 

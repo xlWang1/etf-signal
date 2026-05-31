@@ -45,10 +45,10 @@ def send_signal_via_template(openid, template_id, access_token, html_url: str):
     payload = {
         "touser": openid,
         "template_id": template_id,
-        "url": "https://xlwang1.github.io/etf-signal-pages/20260528.html",
+        "url": html_url,
         "data": {
             "date": {"value": datetime.now().strftime("%Y-%m-%d %H:%M:%S")},
-            "notice": {"value": ""}
+            "notice": {"value": html_url}
         }
     }
 
