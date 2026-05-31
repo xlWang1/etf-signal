@@ -24,8 +24,9 @@ def generate_html(msg: str) -> str:
 
     with open(path, "w", encoding="utf-8") as f:
         f.write(html)
-    print(f"HTML 文件已生成：https://xlwang1.github.io/etf-signal/page/{filename}")
-    return path
+    html_path = f"https://xlwang1.github.io/etf-signal/page/{filename}"
+    print(f"HTML 文件已生成：{html_path}")
+    return html_path
 
 
 def extract_summary(msg: str) -> str:
@@ -41,14 +42,14 @@ def extract_summary(msg: str) -> str:
 
 def send_signal_via_template(openid, template_id, access_token, html_url: str):
     url = f"https://api.weixin.qq.com/cgi-bin/message/template/send?access_token={access_token}"
-    html_url = html_url[2:]
+
     payload = {
         "touser": openid,
         "template_id": template_id,
-        "url": "https://github.com/xlWang1/etf-signal/blob/master" + html_url,
+        "url": html_url,
         "data": {
             "date": {"value": datetime.now().strftime("%Y-%m-%d %H:%M:%S")},
-            "notice": {"value": "https://github.com/xlWang1/etf-signal/blob/master" + html_url}
+            "notice": {"value": html_url}
         }
     }
 

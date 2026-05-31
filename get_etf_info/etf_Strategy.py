@@ -352,10 +352,11 @@ def print_message():
     )
 
     print(msg)
+    return  result
 if __name__ == "__main__":
-    mock_positions = [
+    positions = [
         'sz.159131',
         'sz.159381',
     ]
-    tomorrow_signal(mock_positions)
-    print_message()
+    tomorrow_signal(positions)
+    print(print_message())
