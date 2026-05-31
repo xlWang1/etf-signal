@@ -41,14 +41,14 @@ def extract_summary(msg: str) -> str:
 
 def send_signal_via_template(openid, template_id, access_token, html_url: str):
     url = f"https://api.weixin.qq.com/cgi-bin/message/template/send?access_token={access_token}"
-
+    html_url = html_url[2:]
     payload = {
         "touser": openid,
         "template_id": template_id,
-        "url": html_url,
+        "url": "https://github.com/xlWang1/etf-signal/blob/master" + html_url,
         "data": {
             "date": {"value": datetime.now().strftime("%Y-%m-%d %H:%M:%S")},
-            "notice": {"value": html_url}
+            "notice": {"value": "https://github.com/xlWang1/etf-signal/blob/master" + html_url}
         }
     }
 
