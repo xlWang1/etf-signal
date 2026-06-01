@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETF明日操作信号</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, "Helvetica Neue", Arial, "PingFang SC",
+            "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f7fa;
+            padding: 16px;
+            line-height: 1.8;
+            color: #333;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,.05);
+        }
+        h2 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            color: #1f2937;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-break: break-word;
+            background: #f9fafb;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .success { color: #059669; }
+        .warn    { color: #d97706; }
+        .danger  { color: #dc2626; }
+        .info    { color: #2563eb; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>📊 ETF明日操作信号</h2>
+    <pre>
+📅 明日操作信号（Baostock）
+📆 当前日期：2026-06-01
+💼 当前持仓：['sz.159131', 'sz.159381']
+========================================
+📊 检查当前持仓5日线状态:
+----------------------------------------
+📈 港股通信息技术ETF (sz.159131): 收盘价 1.089 > MA5 1.073 (安全)
+📉 创业板人工智能ETF (sz.159381): 收盘价 2.625 < MA5 2.662 (跌破)
+
+⛔ 操作建议：
+   🔴 以下持仓已跌破5日线，建议卖出：
+      创业板人工智能ETF (sz.159381) 收盘价:2.625 < MA5:2.662
+
+✅ 操作建议：
+   🟢 以下持仓未跌破5日线，可继续持有：
+      港股通信息技术ETF (sz.159131) 收盘价:1.089 > MA5:1.073</pre>
+</div>
+
+</body>
+</html>
