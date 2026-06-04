@@ -357,6 +357,7 @@ if __name__ == "__main__":
     positions = [
         'sz.159131',
         'sz.159381',
+        'sz.159611'
     ]
     tomorrow_signal(positions)
     print(print_message())
